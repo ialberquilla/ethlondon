@@ -1,0 +1,8 @@
+spicy:
+  threshold: 1
+  validators:
+    - "0x7C61C48919805eDC3Bd75ace9d7211Fb3b0Ed13D"
+arbitrumsepolia:
+  threshold: 1
+  validators:
+    - "0x7C61C48919805eDC3Bd75ace9d7211Fb3b0Ed13D"
