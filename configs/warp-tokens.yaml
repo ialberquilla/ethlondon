@@ -1,0 +1,8 @@
+base:
+  chainName: arbitrumsepolia
+  type: collateral
+  address: "0x75faf114eafb1BDbe2F0316DF893fd58CE46AA4d"
+  isNft: false
+synthetics:
+  - chainName: spicy
+
