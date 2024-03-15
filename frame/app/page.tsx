@@ -5,32 +5,23 @@ import { NEXT_PUBLIC_URL } from './config';
 const frameMetadata = getFrameMetadata({
   buttons: [
     {
-      label: 'Story time',
-    },
-    {
-      action: 'tx',
-      label: 'Send Base Sepolia',
-      target: `${NEXT_PUBLIC_URL}/api/tx`,
-      postUrl: `${NEXT_PUBLIC_URL}/api/tx-success`,
+      label: 'Support',
     },
   ],
   image: {
-    src: `${NEXT_PUBLIC_URL}/park-3.png`,
+    src:"https://bafkreid2vop4cc6477aihn6mhn7mfky36j6rcwmaljka3jskgi3egcdua4.ipfs.nftstorage.link/",
     aspectRatio: '1:1',
   },
-  input: {
-    text: 'Tell me a story',
-  },
-  postUrl: `${NEXT_PUBLIC_URL}/api/frame`,
+  postUrl: `${NEXT_PUBLIC_URL}/api/details`,
 });
 
 export const metadata: Metadata = {
-  title: 'zizzamia.xyz',
+  title: 'Support your team frame',
   description: 'LFG',
   openGraph: {
-    title: 'zizzamia.xyz',
-    description: 'LFG',
-    images: [`${NEXT_PUBLIC_URL}/park-1.png`],
+    title: 'Support your team frame',
+    description: 'Support your team frame',
+    images: ["https://bafkreid2vop4cc6477aihn6mhn7mfky36j6rcwmaljka3jskgi3egcdua4.ipfs.nftstorage.link/"],
   },
   other: {
     ...frameMetadata,
@@ -40,7 +31,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <h1>zizzamia.xyz</h1>
+      <h1>Heyyyyyyyyyyyyyy</h1>
     </>
   );
 }
