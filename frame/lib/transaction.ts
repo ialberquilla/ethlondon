@@ -35,7 +35,11 @@ export const sendTransaction = async (fid: string) => {
     .extend(bundlerActions)
     .extend(pimlicoBundlerActions);
 
-  const encodedData = encode([BigInt(0), BigInt(2), BigInt(5)]);
+  const encodedData = encode([
+    BigInt(0),
+    BigInt(1),
+    BigInt(5),
+  ]);
 
   const callData = await account.encodeCallData({
     to: STAKE_CONTRACT as `0x${string}`,
@@ -94,5 +98,4 @@ export const sendTransaction = async (fid: string) => {
   // const txHashApprove = receiptApprove.receipt.transactionHash
 
   // console.log({ txHashApprove });
-
 };

@@ -136,7 +136,7 @@ export default function NextMatch() {
         <h1 className="text-3xl font-bold">Next Football Match</h1>
         <br />
         <br />
-        <h2 className="text-3xl font-bold">Manchester vs Real sociedad</h2>
+        <h2 className="text-3xl font-bold">PSG vs Arsenal</h2>
         <br />
         <br />
         <div className="mt-4 flex items-center justify-between">

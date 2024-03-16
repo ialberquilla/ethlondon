@@ -1,0 +1,10 @@
+{
+  "arbitrumsepolia": {
+    "router": "0x7DEEC41cDcb50281E2f8CFb9207a94F144b974A7",
+    "tokenType": "collateral"
+  },
+  "spicy": {
+    "router": "0x7b002EdeE58866aBCC897786C649968BDA4e26BD",
+    "tokenType": "synthetic"
+  }
+}
