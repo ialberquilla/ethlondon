@@ -16,7 +16,7 @@ export default function NextMatch() {
         <br/>
         <br/>
         <div className="mt-4 flex items-center justify-between">
-          <div className="w-1/2">
+          <div className="w-1/2 pr-4">
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h2 className="text-xl font-bold mb-4">Total reseved tokens by teams</h2>
               <BarChartReserved className="w-full aspect-[16/9]" />
