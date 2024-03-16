@@ -4,6 +4,11 @@ import { NEXT_PUBLIC_URL } from '../../config';
 
 
 async function getResponse(req: NextRequest): Promise<NextResponse> {
+
+  const imageURL = `${NEXT_PUBLIC_URL}/api/current`;
+
+  console.log({ imageURL })
+
   return new NextResponse(
     getFrameHtmlResponse({
       buttons: [
@@ -18,7 +23,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
         },
       ],
       image: {
-        src: `https://bafkreied55f7skfo65d4yxg6ec5w2x7556mp4sifgdap7wlnunbjzf2zsa.ipfs.nftstorage.link/`,
+        src: imageURL,
       },
       postUrl: `${NEXT_PUBLIC_URL}/api/stake`,
     }),

@@ -20,6 +20,7 @@
     "permissionless": "^0.0.35",
     "pino-pretty": "^10.3.1",
     "react": "^18",
+    "react-chartjs-2": "^5.2.0",
     "react-dom": "^18",
     "viem": "1"
   },

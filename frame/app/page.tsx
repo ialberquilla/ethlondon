@@ -9,7 +9,7 @@ const frameMetadata = getFrameMetadata({
     },
   ],
   image: {
-    src:"https://bafkreid2vop4cc6477aihn6mhn7mfky36j6rcwmaljka3jskgi3egcdua4.ipfs.nftstorage.link/",
+    src:"https://bafkreihd3t3ycowal76otma3to6j7gr4bhb2d4gu2imlhvrgu575ozbtea.ipfs.nftstorage.link/",
     aspectRatio: '1:1',
   },
   postUrl: `${NEXT_PUBLIC_URL}/api/details`,
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Support your team frame',
     description: 'Support your team frame',
-    images: ["https://bafkreid2vop4cc6477aihn6mhn7mfky36j6rcwmaljka3jskgi3egcdua4.ipfs.nftstorage.link/"],
+    images: ["https://bafkreihd3t3ycowal76otma3to6j7gr4bhb2d4gu2imlhvrgu575ozbtea.ipfs.nftstorage.link/"],
   },
   other: {
     ...frameMetadata,
