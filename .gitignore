@@ -2,3 +2,4 @@
 frame/node_modules
 frame/.next
 frame/.env
+contracts/node_modules
