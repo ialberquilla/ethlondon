@@ -32,13 +32,44 @@ export default function FansDashboard() {
               </thead>
               <tbody className="divide-y divide-gray-200 bg-white">
                 <tr>
-                  <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">#123456</td>
-                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">John Doe</td>
-                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">2023-04-01</td>
-                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">$99.99</td>
+                  <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">#1</td>
+                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">JDone</td>
+                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">5560 USDC</td>
+                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">50 USDC</td>
                   <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                     <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                      Shipped
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">#2</td>
+                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">AMorris</td>
+                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">5160 USDC</td>
+                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">48 USDC</td>
+                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                    </span>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">#3</td>
+                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Melan</td>
+                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">4360 USDC</td>
+                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">43 USDC</td>
+                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                    </span>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">#4</td>
+                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Degen</td>
+                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">3560 USDC</td>
+                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">35 USDC</td>
+                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
                     </span>
                   </td>
                 </tr>

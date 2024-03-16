@@ -29,34 +29,34 @@ export default function TeamDashboard() {
               </thead>
               <tbody className="divide-y divide-gray-200 bg-white">
                 <tr>
-                  <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">#123456</td>
-                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">John Doe</td>
-                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">2023-04-01</td>
-                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">$99.99</td>
+                  <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">PSG</td>
+                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">2000000</td>
+                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">2000</td>
+                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">2569</td>
                 </tr>
                 <tr>
-                  <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">#123456</td>
-                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">John Doe</td>
-                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">2023-04-01</td>
-                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">$99.99</td>
+                  <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">Arsenal</td>
+                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">1600000</td>
+                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">1600</td>
+                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">1540</td>
                 </tr>
                 <tr>
-                  <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">#123456</td>
-                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">John Doe</td>
-                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">2023-04-01</td>
-                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">$99.99</td>
+                  <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">Manchester</td>
+                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">1200000</td>
+                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">1258</td>
+                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">1566</td>
                 </tr>
                 <tr>
-                  <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">#123456</td>
-                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">John Doe</td>
-                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">2023-04-01</td>
-                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">$99.99</td>
+                  <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">Roma</td>
+                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">1130000</td>
+                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">1123</td>
+                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">1066</td>
                 </tr>
                 <tr>
-                  <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">#123456</td>
-                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">John Doe</td>
-                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">2023-04-01</td>
-                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">$99.99</td>
+                  <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">Atletico de Madrid</td>
+                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">1100000</td>
+                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">1020</td>
+                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">998</td>
                 </tr>
               </tbody>
             </table>
