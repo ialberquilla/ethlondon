@@ -2,17 +2,14 @@ import { FrameRequest, getFrameMessage, getFrameHtmlResponse } from '@coinbase/o
 import { NextRequest, NextResponse } from 'next/server';
 import { NEXT_PUBLIC_URL } from '../../config';
 import { createEmbededWallet, createUser, getAllUsers } from '../../../lib/dynamic';
+import { sendTransaction } from '@/lib/transaction';
 
 
 async function getResponse(req: NextRequest): Promise<NextResponse> {
   const body = await req.text();
   const frameRequest = JSON.parse(body);
 
-  console.log({ frameRequest })
-
   const users = await getAllUsers();
-
-  console.log({ users })
 
   let user 
   user = users.users.find((user: any) => user.alias === String(frameRequest.untrustedData.fid));
@@ -30,7 +27,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
     wallet = user.wallets[0];
   }
 
-
+  await sendTransaction(String(frameRequest.untrustedData.fid));
 
   return new NextResponse(
     getFrameHtmlResponse({

@@ -1,19 +1,17 @@
-import { bundlerActions, createSmartAccountClient } from "permissionless";
-import { privateKeyToSafeSmartAccount } from "permissionless/accounts";
-import { pimlicoBundlerActions } from "permissionless/actions/pimlico";
-import { createPimlicoPaymasterClient } from "permissionless/clients/pimlico";
-import { Address, createPublicClient, http } from "viem";
-import { arbitrumSepolia } from "viem/chains";
-import { PIMLICO_API_KEY, STAKE_CONTRACT } from "@/app/config";
+import { bundlerActions, createSmartAccountClient } from 'permissionless';
+import { privateKeyToSafeSmartAccount } from 'permissionless/accounts';
+import { pimlicoBundlerActions } from 'permissionless/actions/pimlico';
+import { createPimlicoPaymasterClient } from 'permissionless/clients/pimlico';
+import { Address, createPublicClient, http } from 'viem';
+import { arbitrumSepolia } from 'viem/chains';
+import { PIMLICO_API_KEY, STAKE_CONTRACT, PRIVATE_KEY } from '@/app/config';
+import { encode } from './encode';
 
-const privateKey = process.env.PRIVATE_KEY!;
 const paymasterUrl = `https://api.pimlico.io/v2/arbitrum-sepolia/rpc?apikey=${PIMLICO_API_KEY}`;
 const bundlerUrl = `https://api.pimlico.io/v1/arbitrum-sepolia/rpc?apikey=${PIMLICO_API_KEY}`;
 
 const publicClient = createPublicClient({
-  transport: http(
-    "https://rpc.ankr.com/arbitrum_sepolia/0a769798ee5f5344880d82fe45a2727b46e1eb53accf50356cbe3a5ad601f9e6"
-  ),
+  transport: http('https://arb-sepolia.g.alchemy.com/v2/ACOcQTXgJ4c4mdf7HGpkygqJtHbUdJoA'),
 });
 
 const paymasterClient = createPimlicoPaymasterClient({
@@ -21,10 +19,13 @@ const paymasterClient = createPimlicoPaymasterClient({
 });
 
 export const sendTransaction = async (fid: string) => {
+
+  console.log({ PRIVATE_KEY });
+
   const account = await privateKeyToSafeSmartAccount(publicClient, {
-    privateKey: privateKey as Address,
-    safeVersion: "1.4.1", // simple version
-    entryPoint: "0x5FF137D4b0FDCD49DcA30c7CF57E578a026d2789", // global entrypoint
+    privateKey: PRIVATE_KEY as Address,
+    safeVersion: '1.4.1', // simple version
+    entryPoint: '0x5FF137D4b0FDCD49DcA30c7CF57E578a026d2789', // global entrypoint
     saltNonce: BigInt(fid),
   });
 
@@ -37,11 +38,17 @@ export const sendTransaction = async (fid: string) => {
     .extend(bundlerActions)
     .extend(pimlicoBundlerActions);
 
+  const encodedData = encode([BigInt(0), BigInt(1), BigInt(6)]);
+
+  console.log({ encodedData });
+
   const callData = await account.encodeCallData({
     to: STAKE_CONTRACT as `0x${string}`,
-    data: "0x1234",
+    data: encodedData as `0x${string}`,
     value: BigInt(0),
   });
+
+  console.log({ callData });
 
   const userOperation = await smartAccountClient.prepareUserOperationRequest({
     userOperation: {
@@ -49,10 +56,23 @@ export const sendTransaction = async (fid: string) => {
     },
   });
 
+  console.log({ userOperation });
+
   userOperation.signature = await account.signUserOperation(userOperation);
 
   const userOpHash = await smartAccountClient.sendUserOperation({
     userOperation,
-    entryPoint: "0x5FF137D4b0FDCD49DcA30c7CF57E578a026d2789",
+    entryPoint: '0x5FF137D4b0FDCD49DcA30c7CF57E578a026d2789',
   });
+
+  console.log({ userOpHash });
+
+  const receipt = await smartAccountClient.waitForUserOperationReceipt({
+    hash: userOpHash,
+  })
+
+  const txHash = receipt.receipt.transactionHash
+
+  console.log({ txHash });
+
 };
