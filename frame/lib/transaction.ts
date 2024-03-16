@@ -20,8 +20,6 @@ const paymasterClient = createPimlicoPaymasterClient({
 
 export const sendTransaction = async (fid: string) => {
 
-  console.log({ PRIVATE_KEY });
-
   const account = await privateKeyToSafeSmartAccount(publicClient, {
     privateKey: PRIVATE_KEY as Address,
     safeVersion: '1.4.1', // simple version
@@ -38,17 +36,13 @@ export const sendTransaction = async (fid: string) => {
     .extend(bundlerActions)
     .extend(pimlicoBundlerActions);
 
-  const encodedData = encode([BigInt(0), BigInt(1), BigInt(6)]);
-
-  console.log({ encodedData });
+  const encodedData = encode([BigInt(0), BigInt(2), BigInt(6)]);
 
   const callData = await account.encodeCallData({
     to: STAKE_CONTRACT as `0x${string}`,
     data: encodedData as `0x${string}`,
     value: BigInt(0),
   });
-
-  console.log({ callData });
 
   const userOperation = await smartAccountClient.prepareUserOperationRequest({
     userOperation: {
@@ -64,8 +58,6 @@ export const sendTransaction = async (fid: string) => {
     userOperation,
     entryPoint: '0x5FF137D4b0FDCD49DcA30c7CF57E578a026d2789',
   });
-
-  console.log({ userOpHash });
 
   const receipt = await smartAccountClient.waitForUserOperationReceipt({
     hash: userOpHash,
