@@ -43,7 +43,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
         }
       ],
       image: {
-        src: `https://bafkreied55f7skfo65d4yxg6ec5w2x7556mp4sifgdap7wlnunbjzf2zsa.ipfs.nftstorage.link/`,
+        src: `https://bafkreihqnoi6eygxrtmamnmqt5azztyyayvrv32y2opxowthexx5gqzoqy.ipfs.nftstorage.link/`,
       },
       postUrl: `${NEXT_PUBLIC_URL}/api/frame`,
     }),
