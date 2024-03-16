@@ -37,15 +37,10 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
     getFrameHtmlResponse({
       buttons: [
         {
+          action: 'link',
           label: 'See details',
-          target: `${txId}/api/tx`,
-        },
-        {
-          action: 'tx',
-          label: 'Check transaction',
-          target: `${NEXT_PUBLIC_URL}/api/tx`,
-          postUrl: `${NEXT_PUBLIC_URL}/api/tx-success`,
-        },
+          target: `http://localhost:3001`,
+        }
       ],
       image: {
         src: `https://bafkreied55f7skfo65d4yxg6ec5w2x7556mp4sifgdap7wlnunbjzf2zsa.ipfs.nftstorage.link/`,
