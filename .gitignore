@@ -1,3 +1,4 @@
 .env
 frame/node_modules
 frame/.next
+frame/.env

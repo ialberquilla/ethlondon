@@ -8,7 +8,11 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
   const body = await req.text();
   const frameRequest = JSON.parse(body);
 
+  console.log({ frameRequest })
+
   const users = await getAllUsers();
+
+  console.log({ users })
 
   let user 
   user = users.users.find((user: any) => user.alias === String(frameRequest.untrustedData.fid));
