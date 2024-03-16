@@ -12,6 +12,13 @@ contract Stake {
         uint256 winner;
     }
 
+    event Stake (
+        address indexed staker,
+        uint256 matchId,
+        uint256 team,
+        uint256 amount
+    );
+
     mapping(uint256 => Match) public matches;
     mapping(address => uint256) public stakes;
     uint256 public totalStakers;
@@ -30,6 +37,10 @@ contract Stake {
         } else {
             matches[_matchId].team2Stake += _amount;
         }
+
+        totalStakers += 1;
+
+        emit Stake(msg.sender, _matchId, _team, _amount);
     }
 
     function declareWinner(uint256 _matchId, uint256 _team) public {

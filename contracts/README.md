@@ -11,4 +11,4 @@ REPORT_GAS=true npx hardhat test
 npx hardhat node
 npx hardhat run scripts/deploy.ts
 ```
-STAKE_CONTRACT = 0x45dDAD031EA68009E42f8515029a34804B63C57D
+STAKE_CONTRACT = 0xE9c8C3673B3b25EB798baDD72107fc38455Fb908

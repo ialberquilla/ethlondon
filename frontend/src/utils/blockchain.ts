@@ -23,3 +23,36 @@ export const getMatch = async () => {
   return matchObject;
 
 };
+
+
+export const getStakeEvents = async () => {
+  const provider = new ethers.JsonRpcProvider(
+    ANKR_PROVIDER
+  );
+
+
+
+  const contract = new ethers.Contract(
+    STAKE_ADDRESS,
+    StakeABI,
+    provider
+  );
+  const filter = contract.filters.Stake();
+  const events = await contract.queryFilter(filter, -50000);
+
+  console.log({ events })
+
+  const eventsFormatted = events.map((event) => {
+    return {
+      tx: event.transactionHash,
+      staker: event.args.staker,
+      team: event.args.team,
+      amount: event.args.amount,
+      blockNumber: event.blockNumber
+    };
+  })
+
+  eventsFormatted.sort((a, b) => b.blockNumber - a.blockNumber);
+
+  return eventsFormatted;
+}
